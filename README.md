@@ -22,6 +22,8 @@ brew install jenv pyenv nvm
 
 # install nvim
 brew install nvim 
+# install ripgrep for telescope
+brew install ripgrep
 # install nerd-font
 brew tap homebrew/cask-fonts
 brew install font-hack-nerd-font
