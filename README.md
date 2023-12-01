@@ -8,6 +8,7 @@ Using lua and referenced [craftzdog's dotfiles](https://github.com/craftzdog/dot
 - [nvm](https://github.com/nvm-sh/nvm)
 - [pyenv](https://github.com/pyenv/pyenv)
 - [jenv](https://github.com/jenv/jenv)
+- [conda](https://conda.io/projects/conda/en/latest/user-guide/getting-started.html)
 
 ## Install
 
@@ -18,7 +19,8 @@ Install nvim and nerd-font
 # for Mac
 # install version manager for java python nodejs
 brew install jenv pyenv nvm
-# the existing setting for jenv pyenv nvm can be found online in official website
+brew install --cask anaconda
+# the existing setting for jenv pyenv nvm conda can be found online in official website
 
 # install nvim
 brew install nvim 
