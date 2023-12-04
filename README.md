@@ -9,6 +9,7 @@ Using lua and referenced [craftzdog's dotfiles](https://github.com/craftzdog/dot
 - [pyenv](https://github.com/pyenv/pyenv)
 - [jenv](https://github.com/jenv/jenv)
 - [conda](https://conda.io/projects/conda/en/latest/user-guide/getting-started.html)
+- [delta](https://github.com/dandavison/delta)
 
 ## Install
 
@@ -29,6 +30,8 @@ brew install ripgrep
 # install nerd-font
 brew tap homebrew/cask-fonts
 brew install font-hack-nerd-font
+# install delta for diff
+brew install git-delta
 ```
 
 run `installer.sh` to link the file

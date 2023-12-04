@@ -1,3 +1,21 @@
 [user]
 	name = momingse
 	email = da1710080850@gmail.com
+# git-delta config
+[core]
+    pager = delta
+
+[interactive]
+    diffFilter = delta --color-only --features=interactive
+
+[delta]
+    # features = gruvmax-fang # theme from themes.gitconfig
+	feature = zebra-light
+	side-by-side = true # Side-by-side view
+
+[delta "interactive"]
+    keep-plus-minus-markers = false
+
+# Theme of delta come from https://github.com/dandavison/delta/blob/main/themes.gitconfig
+[include]
+	path = ~/DOTFILES/themes.gitconfig # exact path to themes.gitconfig
