@@ -13,7 +13,10 @@ Using lua and referenced [craftzdog's dotfiles](https://github.com/craftzdog/dot
 
 ## Install
 
-Install [oh-my-zsh](https://ohmyz.sh/)
+Install oh-my-zsh
+```
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
 
 Install nvim and nerd-font
 ```bash
@@ -25,11 +28,10 @@ brew install --cask anaconda
 
 # install nvim
 brew install nvim 
-# install ripgrep for telescope
-brew install ripgrep
-# install nerd-font
+# install fonts
 brew tap homebrew/cask-fonts
-brew install font-hack-nerd-font
+brew install font-jetbrains-mono-nerd-font
+
 # install delta for diff
 brew install git-delta
 ```
@@ -46,15 +48,3 @@ run the following command in nvim to install package and lsp
 :PackerInstall
 :Mason
 ```
-
-## Key Mapping
-
-### **normal mode**
-
-- dw - now delete the word at front for using `e` to move
-
-        a word| => a worddw| => a |
-
-### **insert mode**
-
-- jk - same as `<Esc>`

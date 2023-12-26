@@ -1,41 +1,41 @@
-vim.cmd("autocmd!")
+local opt=vim.opt
+opt.number=true
+opt.relativenumber=true
 
-vim.scriptencoding = 'utf-8'
-vim.opt.encoding = 'utf-8'
-vim.opt.fileencoding = 'uft-8'
+opt.scrolloff=5
+opt.sidescrolloff=5
 
-vim.wo.number = true
-vim.wo.relativenumber = true
+opt.hlsearch=true
+opt.incsearch=true
 
-vim.opt.title = true
-vim.opt.autoindent = true
-vim.opt.hlsearch = true
-vim.opt.backup = false
-vim.opt.showcmd = true
-vim.opt.cmdheight = 1
-vim.opt.laststatus = 2
-vim.opt.expandtab = true
-vim.opt.scrolloff = 10
-vim.opt.shell = 'zsh'
-vim.opt.backupskip = "/tmp/*./private/tmp/*"
-vim.opt.inccommand = 'split'
-vim.opt.ignorecase = true
-vim.opt.smarttab = true
-vim.opt.breakindent = true
-vim.opt.shiftwidth = 2
-vim.opt.tabstop = 2
-vim.opt.ai = true            -- Auto indent
-vim.opt.si = true            -- Smart indent
-vim.opt.wrap = false         -- No wrap lines
-vim.opt.backspace = 'start,eol,indent'
-vim.opt.path:append { '**' } -- Finding files - Search down into subfolders
-vim.opt.wildignore:append { '*/node_module/*' }
+opt.mouse:append('a')
+if has 'macunix' then
+	opt.clipboard:append('unnamedplus')
+elseif has 'win32' then
+	opt.clipboard:prepend { 'unnamed' , 'unnamedplus' }
+else
+	opt.clipboard = "unnamedplus"
 
--- Turn off paste mode when leaving insert
-vim.api.nvim_create_autocmd("InsertLeave", {
-  pattern = '*',
-  command = 'set nopaste'
+opt.tabstop=2
+opt.shiftwidth=2
+opt.expandtab=true
+opt.autoindent=true
+
+opt.ignorecase=true
+opt.smartcase=true
+
+opt.swapfile=false
+opt.autoread=true
+vim.bo.autoread=true
+
+opt.cursorline=true
+opt.termguicolors=true
+
+vim.api.nvim_create_autocmd('TextYankPost', {
+	callback=function()
+		vim.highlight.on_yank({
+			higroup="IncSearch",
+			timeout=300
+		})
+	end
 })
-
--- Add asterisks in block comments
-vim.opt.formatoptions:append { 'r' }
