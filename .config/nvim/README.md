@@ -27,6 +27,7 @@
 | hinell/duplicate.nvim | duplicate line |
 | mrjones2014/legendary.nvim | key mapping |
 | folke/flash.nvim | fast navigation |
+| lewis6991/gitsigns.nvim | git signs |
 
 
 ## Key Mapping

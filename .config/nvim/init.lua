@@ -143,18 +143,20 @@ require("lazy").setup({
       "nvim-tree/nvim-web-devicons",
     },
   },
+  "lewis6991/gitsigns.nvim",
 })
 
 require("base")
 require("keymap")
+require("lsp-lua")
+require("lsp-typescript")
+require("lsp-tailwind")
 require("p-mason")
 require("p-lsp")
-require("lsp-lua")
 require("p-conform")
 require("p-tree")
 require("p-telescope")
 require("p-bookmark")
-require("lsp-typescript")
 require("p-lint")
 require("p-cmp")
 require("p-treesitter")
@@ -163,4 +165,5 @@ require("p-mini")
 require("p-comment")
 require("p-line")
 require("p-lualine")
+require("p-gitsigns")
 require("color")
