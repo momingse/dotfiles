@@ -4,6 +4,9 @@ require("lspsaga").setup({
   ui = {
     border = "rounded",
   },
+  code_action_prompt = {
+    enable = false,
+  },
 })
 keymap.set("n", "[d", "<cmd>Lspsaga diagnostic_jump_prev<cr>")
 keymap.set("n", "]d", "<cmd>Lspsaga diagnostic_jump_next<cr>")
@@ -23,12 +26,12 @@ vim.api.nvim_create_autocmd("LspAttach", {
     vim.keymap.set("n", "gd", "<cmd>Lspsaga goto_definition<cr>", opts)
     vim.keymap.set("n", "<leader>k", "<cmd>Lspsaga hover_doc<cr>", opts)
     vim.keymap.set("n", "<space>r", "<cmd>Lspsaga rename<cr>", opts)
-    vim.keymap.set(
-      { "n", "v" },
-      "<space>ca",
-      "<cmd>Lspsaga code_action<cr>",
-      opts
-    )
+    -- vim.keymap.set(
+    --   { "n", "v" },
+    --   "<space>ca",
+    --   "<cmd>Lspsaga cr>",
+    --   opts
+    -- )
     vim.keymap.set("n", "gr", builtin.lsp_references, opts)
   end,
 })
