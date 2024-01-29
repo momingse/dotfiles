@@ -3,7 +3,7 @@ local action = require("telescope.actions")
 local actions_state = require("telescope.actions.state")
 local keymap = vim.keymap
 keymap.set("n", "<leader>f", builtin.find_files, {})
-keymap.set("n", "<leader>g", builtin.live_grep, {})
+keymap.set("n", "<leader>d", builtin.live_grep, {})
 keymap.set("n", "<leader>b", builtin.buffers, {})
 keymap.set(
   "n",

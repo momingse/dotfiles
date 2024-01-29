@@ -29,6 +29,8 @@
 | mrjones2014/legendary.nvim                | key mapping                             |
 | folke/flash.nvim                          | fast navigation                         |
 | lewis6991/gitsigns.nvim                   | git signs                               |
+| kdheepak/lazygit.nvim                     | git client                              |
+| echasnovski/mini.nvim                     | animate common Neovim actions           |
 
 ## Key Mapping
 

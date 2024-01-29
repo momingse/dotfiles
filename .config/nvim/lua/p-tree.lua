@@ -19,7 +19,8 @@ local function my_on_attach(bufnr)
   api.config.mappings.default_on_attach(bufnr)
 
   -- custom mappings
-  vim.keymap.set("n", "<c-t>", api.tree.toggle, opts("Toggle"))
+  vim.keymap.set("n", "<c-t>", api.tree.open, opts("Toggle"))
+  -- vim.keymap.set("n", "<c-t>", api.tree.toggle, opts("Toggle"))
   vim.keymap.set("n", "?", api.tree.toggle_help, opts("Help"))
 end
 
@@ -29,7 +30,7 @@ require("nvim-tree").setup({
     custom = { "^.git$" },
   },
   actions = {
-    open_file = { quit_on_open = true },
+    open_file = { quit_on_open = false },
   },
   update_focused_file = {
     enable = true,

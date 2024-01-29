@@ -144,6 +144,13 @@ require("lazy").setup({
     },
   },
   "lewis6991/gitsigns.nvim",
+  {
+    "kdheepak/lazygit.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+  },
+  { "echasnovski/mini.nvim", version = "*" },
 })
 
 require("base")
@@ -166,4 +173,6 @@ require("p-comment")
 require("p-line")
 require("p-lualine")
 require("p-gitsigns")
+require("p-lazygit")
+require("p-animate")
 require("color")
