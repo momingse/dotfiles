@@ -162,6 +162,7 @@ require("lazy").setup({
       vim.api.nvim_create_user_command("PeekClose", require("peek").close, {})
     end,
   },
+  "brooth/far.vim"
 })
 
 require("base")
@@ -187,4 +188,5 @@ require("p-gitsigns")
 require("p-lazygit")
 require("p-animate")
 require("p-peek")
+require("p-far")
 require("color")
