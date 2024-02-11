@@ -162,7 +162,17 @@ require("lazy").setup({
       vim.api.nvim_create_user_command("PeekClose", require("peek").close, {})
     end,
   },
-  "brooth/far.vim"
+  "brooth/far.vim",
+  {
+    "goolord/alpha-nvim",
+    dependencies = {
+      "nvim-tree/nvim-web-devicons",
+      "nvim-lua/plenary.nvim",
+    },
+    config = function()
+      require("alpha").setup(require("alpha.themes.theta").config)
+    end,
+  },
 })
 
 require("base")
