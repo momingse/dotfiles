@@ -18,5 +18,8 @@ require("mason-tool-installer").setup({
     "prettierd",
     "eslint",
     "tailwindcss",
+    "cssls",
+    "pyright",
+    "blue",
   },
 })

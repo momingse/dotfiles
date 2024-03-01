@@ -31,6 +31,10 @@
 | lewis6991/gitsigns.nvim                   | git signs                               |
 | kdheepak/lazygit.nvim                     | git client                              |
 | echasnovski/mini.nvim                     | animate common Neovim actions           |
+| toppair/peek.nvim                         | preview markdown                        |
+| brooth/far.vim                            | find and replace                        |
+| norcalli/nvim-colorizer.lua               | colorizer                               |
+| JoosepAlviste/nvim-ts-context-commentstring | context comment string                |
 
 ## Key Mapping
 

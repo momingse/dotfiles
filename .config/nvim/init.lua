@@ -173,6 +173,8 @@ require("lazy").setup({
       require("alpha").setup(require("alpha.themes.theta").config)
     end,
   },
+  "norcalli/nvim-colorizer.lua",
+  "JoosepAlviste/nvim-ts-context-commentstring",
 })
 
 require("base")
@@ -180,6 +182,8 @@ require("keymap")
 require("lsp-lua")
 require("lsp-typescript")
 require("lsp-tailwind")
+require("lsp-css")
+require("lsp-python")
 require("p-mason")
 require("p-lsp")
 require("p-conform")
@@ -198,5 +202,6 @@ require("p-gitsigns")
 require("p-lazygit")
 require("p-animate")
 require("p-peek")
+require("p-color")
 require("p-far")
 require("color")

@@ -11,6 +11,7 @@ require("conform").setup({
     markdown = { "prettierd" },
     graphql = { "prettierd" },
     json = { "prettierd" },
+    python = { "blue" },
   },
   format_on_save = {
     timeout_ms = 500,
