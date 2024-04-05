@@ -175,6 +175,7 @@ require("lazy").setup({
   },
   "norcalli/nvim-colorizer.lua",
   "JoosepAlviste/nvim-ts-context-commentstring",
+  "github/copilot.vim",
 })
 
 require("base")

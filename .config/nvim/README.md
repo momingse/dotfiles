@@ -35,6 +35,7 @@
 | brooth/far.vim                            | find and replace                        |
 | norcalli/nvim-colorizer.lua               | colorizer                               |
 | JoosepAlviste/nvim-ts-context-commentstring | context comment string                |
+| github/copilot.vim                        | copilot                                 |
 
 ## Key Mapping
 
