@@ -1,3 +1,5 @@
+vim.api.nvim_set_keymap("n", "<leader>cf", "<cmd>lua require('conform').format()<CR>", { noremap = true, silent = true })
+
 require("conform").setup({
   formatters_by_ft = {
     lua = { "stylua" },
@@ -13,8 +15,8 @@ require("conform").setup({
     json = { "prettierd" },
     python = { "blue" },
   },
-  format_on_save = {
-    timeout_ms = 500,
-    lsp_fallback = true,
-  },
+  -- format_on_save = {
+  --   timeout_ms = 500,
+  --   lsp_fallback = true,
+  -- },
 })
