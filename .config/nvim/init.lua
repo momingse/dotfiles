@@ -32,14 +32,19 @@ require("lazy").setup({
   "WhoIsSethDaniel/mason-tool-installer.nvim",
   {
     "stevearc/conform.nvim",
-    opts = {},
+    lazy = true,
   },
-  "nvim-tree/nvim-tree.lua",
-  "nvim-tree/nvim-web-devicons",
+  {
+    "nvim-tree/nvim-tree.lua",
+    lazy = true,
+  },
+  {
+    "nvim-tree/nvim-web-devicons",
+    lazy = true,
+  },
   {
     "windwp/nvim-autopairs",
     event = "InsertEnter",
-    opts = {}, -- this is equalent to setup({}) function
   },
   {
     "nvim-telescope/telescope.nvim",
@@ -64,17 +69,23 @@ require("lazy").setup({
   {
     "pmizio/typescript-tools.nvim",
     dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
-    opts = {},
+    lazy = true,
   },
-  "mfussenegger/nvim-lint",
-  "windwp/nvim-ts-autotag",
+  {
+    "mfussenegger/nvim-lint",
+    event = { "VeryLazy" },
+  },
+  {
+    "windwp/nvim-ts-autotag",
+    event = "InsertEnter",
+  },
   "axelvc/template-string.nvim",
   { "akinsho/toggleterm.nvim", version = "*", config = true },
   { "echasnovski/mini.nvim", version = "*" },
   "gcmt/wildfire.vim",
   {
     "numToStr/Comment.nvim",
-    lazy = false,
+    event = { "VeryLazy" },
   },
   "hinell/duplicate.nvim",
   {
@@ -85,7 +96,6 @@ require("lazy").setup({
   {
     "folke/flash.nvim",
     event = "VeryLazy",
-    opts = {},
     keys = {
       {
         "s",
@@ -146,6 +156,7 @@ require("lazy").setup({
   "lewis6991/gitsigns.nvim",
   {
     "kdheepak/lazygit.nvim",
+    event = { "VeryLazy" },
     dependencies = {
       "nvim-lua/plenary.nvim",
     },
@@ -162,7 +173,10 @@ require("lazy").setup({
       vim.api.nvim_create_user_command("PeekClose", require("peek").close, {})
     end,
   },
-  "brooth/far.vim",
+  {
+    "brooth/far.vim",
+    event = { "VeryLazy" },
+  },
   {
     "goolord/alpha-nvim",
     dependencies = {
@@ -173,8 +187,14 @@ require("lazy").setup({
       require("alpha").setup(require("alpha.themes.theta").config)
     end,
   },
-  "norcalli/nvim-colorizer.lua",
-  "JoosepAlviste/nvim-ts-context-commentstring",
+  {
+    "norcalli/nvim-colorizer.lua",
+    event = { "VeryLazy" },
+  },
+  {
+    "JoosepAlviste/nvim-ts-context-commentstring",
+    event = { "VeryLazy" },
+  },
   "github/copilot.vim",
 })
 
@@ -185,6 +205,7 @@ require("lsp-typescript")
 require("lsp-tailwind")
 require("lsp-css")
 require("lsp-python")
+require("lsp-prisma")
 require("p-mason")
 require("p-lsp")
 require("p-conform")
