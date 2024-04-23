@@ -21,5 +21,6 @@ require("mason-tool-installer").setup({
     "cssls",
     "pyright",
     "blue",
+    "prismals"
   },
 })
