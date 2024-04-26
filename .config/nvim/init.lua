@@ -45,6 +45,7 @@ require("lazy").setup({
   {
     "windwp/nvim-autopairs",
     event = "InsertEnter",
+    opts = {}
   },
   {
     "nvim-telescope/telescope.nvim",
@@ -69,6 +70,7 @@ require("lazy").setup({
   {
     "pmizio/typescript-tools.nvim",
     dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+    opts = {},
     lazy = true,
   },
   {
@@ -96,6 +98,7 @@ require("lazy").setup({
   {
     "folke/flash.nvim",
     event = "VeryLazy",
+    opts = {},
     keys = {
       {
         "s",
@@ -175,7 +178,7 @@ require("lazy").setup({
   },
   {
     "brooth/far.vim",
-    event = { "VeryLazy" },
+    lazy = true,
   },
   {
     "goolord/alpha-nvim",
@@ -193,7 +196,7 @@ require("lazy").setup({
   },
   {
     "JoosepAlviste/nvim-ts-context-commentstring",
-    event = { "VeryLazy" },
+    lazy = true
   },
   "github/copilot.vim",
 })
