@@ -120,7 +120,7 @@ export JENV_SHELL=zsh
 export JENV_LOADED=1
 unset JAVA_HOME
 unset JDK_HOME
-source '/opt/homebrew/Cellar/jenv/0.5.6/libexec/libexec/../completions/jenv.zsh'
+source '/opt/homebrew/Cellar/jenv/0.5.7/libexec/libexec/../completions/jenv.zsh'
 jenv rehash 2>/dev/null
 jenv refresh-plugins
 jenv() {
@@ -153,3 +153,4 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+PATH=~/.console-ninja/.bin:$PATH

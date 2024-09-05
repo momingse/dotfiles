@@ -45,7 +45,7 @@ require("lazy").setup({
   {
     "windwp/nvim-autopairs",
     event = "InsertEnter",
-    opts = {}
+    config = true,
   },
   {
     "nvim-telescope/telescope.nvim",
@@ -79,7 +79,6 @@ require("lazy").setup({
   },
   {
     "windwp/nvim-ts-autotag",
-    event = "InsertEnter",
   },
   "axelvc/template-string.nvim",
   { "akinsho/toggleterm.nvim", version = "*", config = true },
@@ -178,7 +177,6 @@ require("lazy").setup({
   },
   {
     "brooth/far.vim",
-    lazy = true,
   },
   {
     "goolord/alpha-nvim",
@@ -196,7 +194,7 @@ require("lazy").setup({
   },
   {
     "JoosepAlviste/nvim-ts-context-commentstring",
-    lazy = true
+    lazy = true,
   },
   "github/copilot.vim",
 })
@@ -229,4 +227,5 @@ require("p-animate")
 require("p-peek")
 require("p-color")
 require("p-far")
+require("p-autotag")
 require("color")
