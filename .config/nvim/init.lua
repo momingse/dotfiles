@@ -196,7 +196,27 @@ require("lazy").setup({
     "JoosepAlviste/nvim-ts-context-commentstring",
     lazy = true,
   },
-  "github/copilot.vim",
+  {
+    "antosha417/nvim-lsp-file-operations",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-tree.lua",
+    },
+  },
+  {
+    "Exafunction/codeium.vim",
+    event = "BufEnter",
+  },
+  {
+    "akinsho/flutter-tools.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "stevearc/dressing.nvim",
+    },
+  },
+  {
+    "dart-lang/dart-vim-plugin",
+  },
 })
 
 require("base")
@@ -228,4 +248,6 @@ require("p-peek")
 require("p-color")
 require("p-far")
 require("p-autotag")
+require("p-file")
+require("p-flutter")
 require("color")

@@ -8,19 +8,17 @@ require("mason").setup({
   },
 })
 
-require("mason-lspconfig").setup()
-
 require("mason-tool-installer").setup({
   ensure_installed = {
     "lua-language-server",
     "stylua",
-    "tsserver",
     "prettierd",
     "eslint",
     "tailwindcss",
     "cssls",
     "pyright",
     "blue",
-    "prismals"
+    "prismals",
+    "dart-debug-adapter"
   },
 })

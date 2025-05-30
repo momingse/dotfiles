@@ -154,3 +154,6 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 PATH=~/.console-ninja/.bin:$PATH
+
+# Setup flutter
+export PATH=$PATH:/Users/momingse/Developments/flutter/bin
