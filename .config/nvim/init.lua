@@ -36,6 +36,7 @@ require("lazy").setup({
   },
   {
     "nvim-tree/nvim-tree.lua",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
     lazy = true,
   },
   {
@@ -160,24 +161,11 @@ require("lazy").setup({
     "kdheepak/lazygit.nvim",
     event = { "VeryLazy" },
     dependencies = {
+      "nvim-telescope/telescope.nvim",
       "nvim-lua/plenary.nvim",
     },
   },
   { "echasnovski/mini.nvim", version = "*" },
-  {
-    "toppair/peek.nvim",
-    event = { "VeryLazy" },
-    build = "deno task --quiet build:fast",
-    config = function()
-      require("peek").setup()
-      -- refer to `configuration to change defaults`
-      vim.api.nvim_create_user_command("PeekOpen", require("peek").open, {})
-      vim.api.nvim_create_user_command("PeekClose", require("peek").close, {})
-    end,
-  },
-  {
-    "brooth/far.vim",
-  },
   {
     "goolord/alpha-nvim",
     dependencies = {
@@ -204,19 +192,52 @@ require("lazy").setup({
     },
   },
   {
-    "Exafunction/codeium.vim",
-    event = "BufEnter",
-  },
-  {
     "akinsho/flutter-tools.nvim",
     dependencies = {
       "nvim-lua/plenary.nvim",
       "stevearc/dressing.nvim",
+      "mfussenegger/nvim-dap",
     },
   },
   {
     "dart-lang/dart-vim-plugin",
+    ft = { "dart" },
   },
+  {
+    "ray-x/go.nvim",
+    dependencies = { -- optional packages
+      "ray-x/guihua.lua",
+      "neovim/nvim-lspconfig",
+      "nvim-treesitter/nvim-treesitter",
+    },
+    opts = {
+      -- lsp_keymaps = false,
+      -- other options
+    },
+    config = function(_, opts)
+      require("go").setup(opts)
+      local format_sync_grp = vim.api.nvim_create_augroup("GoFormat", {})
+      vim.api.nvim_create_autocmd("BufWritePre", {
+        pattern = "*.go",
+        callback = function()
+          require("go.format").goimports()
+        end,
+        group = format_sync_grp,
+      })
+    end,
+    event = { "CmdlineEnter" },
+    ft = { "go", "gomod" },
+    build = ':lua require("go.install").update_all_sync()', -- if you need to install/update all binaries
+  },
+  {
+    "Exafunction/windsurf.vim",
+    event = "BufEnter",
+  },
+  -- {
+  --   "vhyrro/luarocks.nvim",
+  --   priority = 1000, -- Very high priority is required, luarocks.nvim should run as the first plugin in your config.
+  --   config = true,
+  -- },
 })
 
 require("base")
@@ -227,6 +248,8 @@ require("lsp-tailwind")
 require("lsp-css")
 require("lsp-python")
 require("lsp-prisma")
+require("lsp-go")
+require("color")
 require("p-mason")
 require("p-lsp")
 require("p-conform")
@@ -244,10 +267,7 @@ require("p-lualine")
 require("p-gitsigns")
 require("p-lazygit")
 require("p-animate")
-require("p-peek")
 require("p-color")
-require("p-far")
 require("p-autotag")
 require("p-file")
 require("p-flutter")
-require("color")

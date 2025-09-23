@@ -14,6 +14,7 @@ require("nvim-treesitter.configs").setup({
     "prisma",
     "markdown",
     "markdown_inline",
+    "go",
   },
   sync_install = false,
   auto_install = true,

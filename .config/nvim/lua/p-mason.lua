@@ -19,6 +19,7 @@ require("mason-tool-installer").setup({
     "pyright",
     "blue",
     "prismals",
-    "dart-debug-adapter"
+    "dart-debug-adapter",
+    "gopls",
   },
 })
