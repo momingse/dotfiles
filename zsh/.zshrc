@@ -157,3 +157,12 @@ PATH=~/.console-ninja/.bin:$PATH
 
 # Setup flutter
 export PATH=$PATH:/Users/momingse/Developments/flutter/bin
+
+# Load secrets
+if [ -f "$HOME/dotfiles/zsh/.secrets" ]; then
+  source "$HOME/dotfiles/zsh/.secrets"
+fi
+
+# Setup for go
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
